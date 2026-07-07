@@ -1,0 +1,16 @@
+name: Deploy Project
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Code
+        uses: actions/checkout@v7
+      - name: Install Node JS
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+      - name: Install dependecies
+        run: npm ci
+      - name: Run tests
+        run: npm test

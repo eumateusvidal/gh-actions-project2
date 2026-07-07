@@ -8,3 +8,5 @@ jobs:
         run: echo "Hello World"
       - name: Printing goodbye
         run: echo "Done - bye!"
+  deploy:
+    runs-on: unbutu-latest
